@@ -27,13 +27,10 @@ class MemeCollectionViewController: UICollectionViewController {
         let space:CGFloat = 3.0
         let dimensionw = (view.frame.size.width - (2 * space)) / 3.0
         let dimensionh = (view.frame.size.height - (2 * space)) / 3.0
-        //let space2:CGFloat = 90.0
 
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
         flowLayout.itemSize = CGSize(width: dimensionw, height: dimensionh)
-        // Register cell classes
-        // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "memeCollectionCell")
 
         // Do any additional setup after loading the view.
     }
@@ -95,5 +92,39 @@ class MemeCollectionViewController: UICollectionViewController {
     
     }
     */
+
+
+
+
+    // Segue Logic
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "collectionDetail", sender: indexPath)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "collectionDetail" {
+            let targetController = segue.destination as! MemeDetailViewController
+            let indexPath = sender as! IndexPath
+            targetController.passoverMeme = memes[indexPath.row]
+        }
+    }
+
+
+
+
+    func presentMemeEditor(existingMeme: Meme? = nil) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navController = storyboard.instantiateViewController(withIdentifier: "MemeEditor") as! UINavigationController
+        if let memeEditorViewController = navController.viewControllers.first as? MemeEditorViewController,
+            let meme = existingMeme {
+            memeEditorViewController.preloadMeme = meme
+        }
+
+        present(navController, animated: true, completion: nil)
+    }
+
+    @IBAction func navigateToMemeEditor(_ sender: Any) {
+        presentMemeEditor()
+    }
 
 }

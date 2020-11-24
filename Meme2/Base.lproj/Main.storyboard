@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0id-YU-YOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317" y="-473"/>
+            <point key="canvasLocation" x="1059" y="-871"/>
         </scene>
         <!--Meme Editor View Controller-->
         <scene sceneID="ZpO-Nw-yXh">
@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XeC-Dh-Ch0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2142" y="-473"/>
+            <point key="canvasLocation" x="1857" y="-871"/>
         </scene>
         <!--Collection View-->
         <scene sceneID="KEX-Vq-GHC">
@@ -167,10 +167,15 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Collection View" id="FRR-Ee-IvC">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="vMc-bc-dn8"/>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="vMc-bc-dn8">
+                            <connections>
+                                <action selector="navigateToMemeEditor:" destination="IXy-DT-7st" id="bgY-wp-Ifw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="flowLayout" destination="GYd-6a-A6b" id="pon-SG-b7s"/>
+                        <segue destination="sk8-dh-A59" kind="show" identifier="collectionDetail" id="byE-qq-73c"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j19-vP-mTl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -297,11 +302,42 @@
                     </navigationItem>
                     <connections>
                         <outlet property="memeTable" destination="yRk-rA-K7m" id="Nix-J0-7RX"/>
+                        <segue destination="sk8-dh-A59" kind="show" identifier="tableDetail" id="o54-nA-bHd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJR-RR-5lt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="-537.05357142857144"/>
+        </scene>
+        <!--Meme Detail View Controller-->
+        <scene sceneID="UKE-xL-4mW">
+            <objects>
+                <viewController id="sk8-dh-A59" customClass="MemeDetailViewController" customModule="Meme2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HYD-o8-h1W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ErR-xt-krZ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="460-6l-7lp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ErR-xt-krZ" firstAttribute="leading" secondItem="HYD-o8-h1W" secondAttribute="leading" id="QIQ-jm-mPR"/>
+                            <constraint firstAttribute="trailing" secondItem="ErR-xt-krZ" secondAttribute="trailing" id="jNQ-AF-lRo"/>
+                            <constraint firstItem="ErR-xt-krZ" firstAttribute="bottom" secondItem="460-6l-7lp" secondAttribute="bottom" id="kge-V0-zyh"/>
+                            <constraint firstItem="ErR-xt-krZ" firstAttribute="top" secondItem="460-6l-7lp" secondAttribute="top" id="zLt-9M-I6M"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TF9-Hg-2Ua"/>
+                    <connections>
+                        <outlet property="memeDetailImage" destination="ErR-xt-krZ" id="MnC-Lk-qm4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jOv-xV-kPy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356.521739130435" y="-87.053571428571431"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hbM-lh-t9C">
@@ -322,6 +358,9 @@
             <point key="canvasLocation" x="-1622" y="-48"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="o54-nA-bHd"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="collection_30x30" width="30" height="30"/>

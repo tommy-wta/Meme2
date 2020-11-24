@@ -18,6 +18,7 @@
 		139C90ED256C4A5900AA6DBA /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139C90EC256C4A5900AA6DBA /* MemeTableViewController.swift */; };
 		139C90F3256C5A1000AA6DBA /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139C90F2256C5A1000AA6DBA /* MemeCollectionViewCell.swift */; };
 		139C90F7256C5A2200AA6DBA /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139C90F6256C5A2200AA6DBA /* MemeTableViewCell.swift */; };
+		139C90FE256DA06500AA6DBA /* MemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139C90FD256DA06500AA6DBA /* MemeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		139C90EC256C4A5900AA6DBA /* MemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
 		139C90F2256C5A1000AA6DBA /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		139C90F6256C5A2200AA6DBA /* MemeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewCell.swift; sourceTree = "<group>"; };
+		139C90FD256DA06500AA6DBA /* MemeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				139C90D3256C442000AA6DBA /* Assets.xcassets */,
 				139C90D5256C442000AA6DBA /* LaunchScreen.storyboard */,
 				139C90D8256C442000AA6DBA /* Info.plist */,
+				139C90FD256DA06500AA6DBA /* MemeDetailViewController.swift */,
 			);
 			path = Meme2;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				139C90FE256DA06500AA6DBA /* MemeDetailViewController.swift in Sources */,
 				139C90CF256C441F00AA6DBA /* MemeEditorViewController.swift in Sources */,
 				139C90F7256C5A2200AA6DBA /* MemeTableViewCell.swift in Sources */,
 				139C90E1256C446000AA6DBA /* Meme.swift in Sources */,

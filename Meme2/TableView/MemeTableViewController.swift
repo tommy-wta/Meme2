@@ -31,6 +31,23 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
 
 
 
+    
+    // Segue Logic
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "tableDetail", sender: indexPath)
+
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tableDetail" {
+            let targetController = segue.destination as! MemeDetailViewController
+            let indexPath = sender as! IndexPath
+            targetController.passoverMeme = memes[indexPath.row]
+        }
+    }
+
+
+
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
@@ -49,7 +66,6 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
 
         return cell
     }
-
 
     func presentMemeEditor(existingMeme: Meme? = nil) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
