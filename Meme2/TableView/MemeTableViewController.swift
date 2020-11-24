@@ -19,14 +19,18 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        memeTable.reloadData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         //make Sure the tab bar is present and navigation bar are present
-        memeTable.reloadData()
-        print("size of memes array post reload is : \(memes.count)")
-
+        if memes.count  > 0  {
+            memeTable.isHidden = false
+            memeTable.reloadData()
+        } else {
+            memeTable.isHidden  =  true
+        }
     }
 
     // Segue Logic
