@@ -93,9 +93,6 @@ class MemeCollectionViewController: UICollectionViewController {
     }
     */
 
-
-
-
     // Segue Logic
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "collectionDetail", sender: indexPath)
@@ -108,9 +105,6 @@ class MemeCollectionViewController: UICollectionViewController {
             targetController.passoverMeme = memes[indexPath.row]
         }
     }
-
-
-
 
     func presentMemeEditor(existingMeme: Meme? = nil) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

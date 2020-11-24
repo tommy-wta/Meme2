@@ -312,13 +312,13 @@
         <!--Meme Detail View Controller-->
         <scene sceneID="UKE-xL-4mW">
             <objects>
-                <viewController id="sk8-dh-A59" customClass="MemeDetailViewController" customModule="Meme2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="sk8-dh-A59" customClass="MemeDetailViewController" customModule="Meme2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HYD-o8-h1W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ErR-xt-krZ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="460-6l-7lp"/>

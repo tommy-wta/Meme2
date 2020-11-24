@@ -29,9 +29,6 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     }
 
-
-
-    
     // Segue Logic
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "tableDetail", sender: indexPath)
@@ -45,9 +42,7 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
             targetController.passoverMeme = memes[indexPath.row]
         }
     }
-
-
-
+    
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count

@@ -18,7 +18,11 @@ class MemeDetailViewController: UIViewController {
         memeDetailImage.image =  passoverMeme?.memeImage
         // Do any additional setup after loading the view.
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isToolbarHidden = true
+
+    }
 
     /*
     // MARK: - Navigation
