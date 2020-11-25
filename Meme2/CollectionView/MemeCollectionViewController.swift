@@ -28,13 +28,13 @@ class MemeCollectionViewController: UICollectionViewController {
         flowLayout.minimumLineSpacing = space
         flowLayout.itemSize = CGSize(width: dimensionw, height: dimensionh)
 
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadMemeCollection), name: .memeSaved, object: nil)
         // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         print("Collection count: \(memes.count)")
-        self.collectionView.reloadData()
     }
 
     /*
@@ -94,4 +94,7 @@ class MemeCollectionViewController: UICollectionViewController {
         presentMemeEditor()
     }
 
+    @objc func reloadMemeCollection() {
+        self.collectionView.reloadData()
+    }
 }

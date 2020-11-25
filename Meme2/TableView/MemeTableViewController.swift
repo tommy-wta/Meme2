@@ -19,7 +19,7 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //memeTable.reloadData()
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadMemeTable), name: .memeSaved, object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -81,6 +81,10 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     @IBAction func navigateToMemeEditor(_ sender: Any) {
         presentMemeEditor()
+    }
+
+    @objc func reloadMemeTable() {
+        memeTable.reloadData()
     }
 
 }

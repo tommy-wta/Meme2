@@ -100,6 +100,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
+        NotificationCenter.default.post(name: .memeSaved, object: nil)
         print("size of memes: \(appDelegate.memes.count)")
         //appDelegate.memes.append(meme)
     }

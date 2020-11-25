@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130F5900256EB8EF0080FC55 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130F58FF256EB8EF0080FC55 /* Notification.swift */; };
 		139C90CB256C441F00AA6DBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139C90CA256C441F00AA6DBA /* AppDelegate.swift */; };
 		139C90CD256C441F00AA6DBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139C90CC256C441F00AA6DBA /* SceneDelegate.swift */; };
 		139C90CF256C441F00AA6DBA /* MemeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139C90CE256C441F00AA6DBA /* MemeEditorViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		130F58FF256EB8EF0080FC55 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		139C90C7256C441F00AA6DBA /* Meme2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meme2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		139C90CA256C441F00AA6DBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		139C90CC256C441F00AA6DBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				139C90D5256C442000AA6DBA /* LaunchScreen.storyboard */,
 				139C90D8256C442000AA6DBA /* Info.plist */,
 				139C90FD256DA06500AA6DBA /* MemeDetailViewController.swift */,
+				130F58FF256EB8EF0080FC55 /* Notification.swift */,
 			);
 			path = Meme2;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				139C90E1256C446000AA6DBA /* Meme.swift in Sources */,
 				139C90EA256C49B000AA6DBA /* MemeCollectionViewController.swift in Sources */,
 				139C90ED256C4A5900AA6DBA /* MemeTableViewController.swift in Sources */,
+				130F5900256EB8EF0080FC55 /* Notification.swift in Sources */,
 				139C90F3256C5A1000AA6DBA /* MemeCollectionViewCell.swift in Sources */,
 				139C90CB256C441F00AA6DBA /* AppDelegate.swift in Sources */,
 				139C90CD256C441F00AA6DBA /* SceneDelegate.swift in Sources */,
