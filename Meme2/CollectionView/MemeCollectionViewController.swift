@@ -18,8 +18,7 @@ class MemeCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+
         let space:CGFloat = 3.0
         let dimensionw = (view.frame.size.width - (2 * space)) / 3.0
         let dimensionh = (view.frame.size.height - (2 * space)) / 3.0
@@ -29,31 +28,11 @@ class MemeCollectionViewController: UICollectionViewController {
         flowLayout.itemSize = CGSize(width: dimensionw, height: dimensionh)
 
         NotificationCenter.default.addObserver(self, selector: #selector(reloadMemeCollection), name: .memeSaved, object: nil)
-        // Do any additional setup after loading the view.
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        print("Collection count: \(memes.count)")
-    }
-
-    /*
-    // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }*/
 
     // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        print(memes.count)
         return memes.count
     }
 
