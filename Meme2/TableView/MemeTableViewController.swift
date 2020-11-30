@@ -19,20 +19,16 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //memeTable.reloadData()
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadMemeTable), name: .memeSaved, object: nil)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        //make Sure the tab bar is present and navigation bar are present
-        self.memeTable.reloadData()
-        /*
         if memes.count  > 0  {
             memeTable.isHidden = false
-            self.memeTable.reloadData()
         } else {
             memeTable.isHidden  =  true
-        }*/
+        }
     }
 
     // Segue Logic
@@ -62,9 +58,6 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         cell.tableCellTopLabel?.text = meme.topText
         cell.tableCellBottomLabel?.text = meme.bottomText
 
-        print(cell.tableCellTopLabel?.text)
-        print(cell.tableCellBottomLabel?.text)
-
         return cell
     }
 
@@ -83,4 +76,8 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         presentMemeEditor()
     }
 
+    @objc func reloadMemeTable() {
+        memeTable.isHidden = false
+        memeTable.reloadData()
+    }
 }
